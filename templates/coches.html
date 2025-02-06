@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Coches</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+</head>
+<body>
+    {% if marca and modelo %}
+        <h1>Bienvenido, estás gestionando coches {{marca}} {{modelo}}</h1>
+    {% endif %}
+    
+    {% if coches %}
+        <h2>Lista de Coches:</h2>
+        {% for coche in coches %}
+            <p>{{coche.modelo}}</p>
+        {% endfor %}
+    {% else %}
+        <h1>No hay coches</h1>
+    {% endif %}
+
+
+    <h2>Añadir coche</h2>
+    <form action="/coches/add" method="post">
+        <input type="text" name="modelo" placeholder="Modelo del coche" required>
+        <button type="submit">Añadir</button>
+    </form>
+
+
+    <h2>Eliminar Coche</h2>
+    <form action="{{url_for('delete_coches')}}" method="post">
+        <input type="text" name="modelo" placeholder="Modelo del coche a eliminar" required>
+        <input type="submit" value="Eliminar">
+    </form>
+
+
+    <h2>Buscar Coche</h2>
+    <form action="{{ url_for('buscar_coche') }}" method="get">
+        <input type="text" name="modelo" placeholder="Modelo del coche a buscar" required>
+        <input type="submit" value="Buscar">
+    </form>
+
+</body>
+</html>

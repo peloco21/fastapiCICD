@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Servicios{% endblock %}
+
+{% block content %}
+    <div class="services-banner">
+        <h1>Nuestros Servicios</h1>
+        <p>Descubre cómo podemos transformar tu coche con nuestros servicios especializados de personalización y rendimiento.</p>
+    </div>
+
+    <div class="services-list">
+        <div class="service-item">
+            <img src="{{ url_for('static', path='images/subaru.jpg') }}" alt="Tuneo de Coche">
+            <h3>Tuneo de Coche</h3>
+            <p>Transformamos tu coche en una obra de arte con mejoras de rendimiento y estética. Desde ajustes de suspensión hasta modificaciones visuales, tu coche destacará en todos los aspectos.</p>
+        </div>
+
+        <div class="service-item">
+            <img src="{{ url_for('static', path='images/honda.jpg') }}" alt="Modificación de Motor">
+            <h3>Modificación de Motor</h3>
+            <p>¿Quieres más potencia? Modificamos motores con las mejores piezas y técnicas para darle a tu coche un rendimiento superior y una aceleración sin igual.</p>
+        </div>
+
+        <div class="service-item">
+            <img src="{{ url_for('static', path='images/ruedas.jpg') }}" alt="Ruedas Personalizadas">
+            <h3>Ruedas Personalizadas</h3>
+            <p>Le damos el toque final a tu coche con llantas personalizadas, neumáticos de alta calidad y diseño a la medida de tus necesidades.</p>
+        </div>
+
+        <div class="service-item">
+            <img src="{{ url_for('static', path='images/pintura.jpg') }}" alt="Trabajo de Pintura">
+            <h3>Trabajo de Pintura</h3>
+            <p>Cambia la apariencia de tu coche con una pintura única. Ofrecemos colores personalizados, efectos especiales y acabados de alta gama.</p>
+        </div>
+
+        <div class="service-item">
+            <img src="{{ url_for('static', path='images/interior.jpg') }}" alt="Modificación de Interiores">
+            <h3>Modificación de Interiores</h3>
+            <p>La estética interior también es importante. Te ofrecemos modificaciones de asientos, paneles, iluminación y mucho más para que tu coche sea tan atractivo por dentro como por fuera.</p>
+        </div>
+
+        <div class="service-item">
+            <img src="{{ url_for('static', path='images/vinilo.jpg') }}" alt="Vinilado">
+            <h3>Vinilos</h3>
+            <p>Que mejor que ver tu coche destacando sobre el resto, dale un toque de vida con nuestros vinilos.</p>
+        </div>
+    </div>
+{% endblock %}

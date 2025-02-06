@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Explorar Marcas{% endblock %}
+
+{% block content %}
+<div class="main-content">
+    <h2>Explora las Marcas de Coches</h2>
+
+    <form method="GET" action="/gallery" class="search-container">
+        <input type="text" name="search" placeholder="Buscar por marca..." value="{{ search_term }}">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <div class="gallery">
+        {% for marca in marcas %}
+        <a href="/marca/{{ marca.id }}">
+            <img src="{{ url_for('static', path='images/' + marca.logo) }}" alt="{{ marca.nombre }}">
+            <p>{{ marca.nombre }}</p>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+    <div class="hero-banner">
+        <div class="hero-text">
+            <h1>Bienvenido a Los Santos Custom</h1>
+            <p>¡Haz que tu coche se vea como nunca antes con nuestras modificaciones personalizadas!</p>
+            <a href="#services" class="cta-button">Descubre nuestros servicios</a>
+        </div>
+        
+    </div>
+    
+
+    <div class="main-content">
+        <section class="intro">
+            <h2>¿Quiénes Somos?</h2>
+            <div class="intro-content">
+                <p>En Los Santos Custom, nos especializamos en ofrecer modificaciones de alto rendimiento y estilo para tu coche. Ya sea que busques un aspecto único, mayor potencia o personalización en cada detalle, tenemos lo que necesitas. ¡Acompáñanos y haz que tu coche sea verdaderamente tuyo!</p>
+                <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{{ url_for('static', path='images/taller.jpg') }}" class="d-block w-100" alt="Imagen 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ url_for('static', path='images/ciudad.jpg') }}" class="d-block w-100" alt="Imagen 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{{ url_for('static', path='images/kdd.jpg') }}" class="d-block w-100" alt="Imagen 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <h2>Nuestros Servicios</h2>
+            <div class="services-container">
+                <a href="/servicios" class="service-item">
+                    <img src="{{ url_for('static', path='images/e46.jpg') }}" alt="Tuning">
+                    <h3>Tuneo de Coche</h3>
+                    <p>Transformamos tu coche en una obra de arte con mejoras de rendimiento y estética.</p>
+                </a>
+                <a href="/servicios" class="service-item">
+                    <img src="{{ url_for('static', path='images/motor.jpg') }}" alt="Modificacion de motor">
+                    <h3>Modificaciones de Motor</h3>
+                    <p>Potencia tu coche con los mejores motores y piezas del mercado.</p>
+                </a>
+                <a href="/servicios" class="service-item">
+                    <img src="{{ url_for('static', path='images/BMW-BBS.jpg') }}" alt="Ruedas Personalizadas">
+                    <h3>Ruedas Personalizadas</h3>
+                    <p>Le damos el toque final a tu coche con llantas personalizadas y neumáticos de alta calidad.</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>¿Estás listo para mejorar tu coche?</h2>
+            <p>No pierdas la oportunidad de transformar tu vehículo en algo único.</p>
+            <a href="/contact" class="cta-button">Contáctanos ahora</a>
+        </section>
+    </div>
+{% endblock %}

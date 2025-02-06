@@ -1,0 +1,36 @@
+# Usar Alpine Linux como imagen base
+FROM alpine:3.18 AS builder
+
+# Instalar dependencias necesarias para compilar Python y FastAPI
+RUN apk add --no-cache \
+    build-base \
+    libffi-dev \
+    openssl-dev \
+    zlib-dev \
+    musl-dev \
+    python3-dev \
+    py3-pip
+
+# Descargar y compilar Python desde el código fuente
+RUN wget https://www.python.org/ftp/python/3.9.18/Python-3.9.18.tgz && \
+    tar -xzf Python-3.9.18.tgz && \
+    cd Python-3.9.18 && \
+    ./configure --enable-optimizations && \
+    make -j$(nproc) && \
+    make install
+
+# Limpiar archivos temporales para reducir el tamaño
+RUN rm -rf /Python-3.9.18.tgz /Python-3.9.18
+
+# Instalar dependencias de la aplicación
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copiar el código de la aplicación
+COPY . .
+
+# Exponer el puerto en el que corre FastAPI
+EXPOSE 8000
+
+# Comando para ejecutar la aplicación
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

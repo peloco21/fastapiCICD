@@ -1,0 +1,394 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column; 
+    overflow-x: hidden;
+}
+
+header {
+    background: black;
+    color: #f1c40f;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin-top: auto;
+}
+
+.main-content {
+    padding: 20px;
+    margin-top: 20px;
+    flex: 1;
+}
+
+
+.banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 155px;
+    background-image: url('/static/images/ciudad.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+
+.banner img {
+    width: auto;
+    height: 200px;
+    margin-left: 20px;
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.gallery a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border: 2px solid #f1c40f;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.gallery p {
+    margin-top: 10px;
+}
+
+
+button {
+    background: #f1c40f;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #d4ac0d;
+}
+
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #f1c40f;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.search-container button {
+    padding: 10px;
+    background: #f1c40f;
+    color: black;
+    border: 2px solid #f1c40f;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.search-container button:hover {
+    background: #d4ac0d;
+}
+
+
+.navbar {
+    background-color: #2d2b42; 
+    padding: 20px 20; 
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.navbar a {
+    color: #c1c1c1; 
+    text-decoration: none; 
+    font-size: 1.2em; 
+    font-weight: bold;
+    padding: 10px 15px; 
+    border: 2px solid transparent; 
+    border-radius: 5px; 
+    transition: background 0.3s ease, border 0.3s ease;
+    text-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+}
+
+.navbar a:hover {
+    background-color: #f1c40f;
+    color: black; 
+    border-color: #f1c40f; 
+}
+
+.main-content {
+    padding: 20px;
+    margin-top: 20px;
+    flex: 1;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-container h2 {
+    font-size: 2em;
+    color: #f1c40f;
+}
+
+.contact-container p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-size: 1.1em;
+    color: #f1c40f;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 2px solid #f1c40f;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    font-size: 1em;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #f39c12;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button {
+    background: #f1c40f;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background 0.3s ease;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background: #d4ac0d;
+}
+
+
+.hero-banner {
+    position: relative;
+    background-image: url('/static/images/taller2.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.cta-button {
+    background-color: #f1c40f;
+    color: black;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #d4ac0d;
+}
+
+.intro {
+    background-color: #1e1e1e;
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #f1c40f;
+}
+
+.intro-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.intro-content img {
+    width: 800px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.services {
+    background-color: #121212;
+    padding: 40px 20px;
+    color: white;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 2.5em;
+    color: #f1c40f;
+    margin-bottom: 30px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    text-align: center;
+    width: 300px;
+}
+
+.service-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.service-item h3 {
+    font-size: 1.6em;
+    margin-top: 15px;
+    color: #f1c40f;
+}
+
+.service-item p {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+.cta {
+    background-color: #f1c40f;
+    color: black;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+}
+
+.cta h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #333;
+    color: #f1c40f;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #444;
+    color: white;
+}
+
+

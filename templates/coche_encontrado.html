@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Coche Encontrado</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/style.css') }}">
+</head>
+<body>
+    <h1>Coche Encontrado</h1>
+    <p>Modelo: {{ coche.modelo }}</p>
+    <p>ID: {{ coche.id }}</p>
+    <a href="/coches">Volver a la lista</a>
+</body>
+</html>

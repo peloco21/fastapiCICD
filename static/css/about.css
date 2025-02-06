@@ -1,0 +1,128 @@
+.about-banner {
+    background-image: url('/static/images/taller.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: white;
+    padding: 50px 20px;
+}
+
+.about-banner h1 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.about-banner p {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.about-content {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mission, .values, .team, .gallery {
+    margin-bottom: 50px;
+}
+
+.mission p, .values ul, .team-container, .gallery-container {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #ffffff;
+}
+
+.mission h2, .values h2, .team h2, .gallery h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #f1c40f;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.values ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.values-container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.value-item {
+    flex: 1;
+    min-width: 250px;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    color: #f1c40f;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.value-item p {
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+}
+
+.team-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    width: 200px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border: 3px solid #f1c40f;
+}
+
+.team-member h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #f1c40f;
+}
+
+.team-member p {
+    color: #888;
+}
+
+.gallery-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery-container img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+}

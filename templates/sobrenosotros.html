@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}Sobre Nosotros{% endblock %}
+
+{% block content %}
+<div class="about-banner">
+    <h1>Sobre Nosotros</h1>
+    <p>Conoce más sobre nuestra historia, misión y valores.</p>
+</div>
+
+<div class="about-content">
+    <section class="mission">
+        <h2>Nuestra Misión</h2>
+        <p>En Los Santos Custom, nuestra misión es brindar a cada cliente una experiencia única al transformar sus vehículos en obras de arte personalizadas. Nos esforzamos por combinar innovación, estilo y rendimiento en cada proyecto.</p>
+    </section>
+
+    <section class="values">
+        <h2>Valores Fundamentales</h2>
+        <div class="values-container">
+            <div class="value-item">
+                <strong>Innovación:</strong>
+                <p>Siempre estamos a la vanguardia en tecnología y diseño.</p>
+            </div>
+            <div class="value-item">
+                <strong>Calidad:</strong>
+                <p>Nos comprometemos a ofrecer servicios de alta calidad.</p>
+            </div>
+            <div class="value-item">
+                <strong>Pasión:</strong>
+                <p>Somos apasionados por los coches y el arte de la personalización.</p>
+            </div>
+            <div class="value-item">
+                <strong>Satisfacción del Cliente:</strong>
+                <p>Tu satisfacción es nuestra mayor prioridad.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="team">
+        <h2>Conoce a Nuestro Equipo</h2>
+        <div class="team-container">
+            <div class="team-member">
+                <img src="{{ url_for('static', path='images/cristiano.jpg') }}" alt="Cristiano">
+                <h3>Cristiano</h3>
+                <p>CEO & Fundador</p>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', path='images/antonio.jpg') }}" alt="Antonio">
+                <h3>Antonio Recio</h3>
+                <p>Diseñador Jefe</p>
+            </div>
+            <div class="team-member">
+                <img src="{{ url_for('static', path='images/fernando.jpg') }}" alt="Fernando Alonso">
+                <h3>Fernando Alonso</h3>
+                <p>Especialista en Motores</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <h2>Nuestros Logros</h2>
+        <div class="gallery-container">
+            <img src="{{ url_for('static', path='images/panda.jpg') }}" alt="Seat Panda">
+            <img src="{{ url_for('static', path='images/turbo.jpg') }}" alt="Renault Turbo">
+            <img src="{{ url_for('static', path='images/civic.jpg') }}" alt="Honda Civic">
+        </div>
+    </section>
+</div>
+{% endblock %}
